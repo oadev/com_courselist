@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.2.0" method="upgrade">
+	<name>Course List</name>
+	<version>0.2.9</version>
+	<creationDate>October 2014</creationDate>
+	<author>OA Dev</author>
+	<authorUrl>http://www.openacadia.ca</authorUrl>
+	<description>A course listing component for OpenAcadia</description>
+	
+	 
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+		<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+	<update>
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>
+	
+	<!-- front-end files/folders -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>courselist.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+	</files>
+
+	<administration>
+		<!-- language file(s) -->
+		<languages folder="admin/language/en-GB">
+			<language tag="en-GB">en-GB.com_courselist.sys.ini</language>
+		</languages>
+		<!-- admin menu -->
+		<menu link="option=com_courselist">COM_COURSELIST</menu>
+		<submenu>
+			<menu link="option=com_courselist&amp;view=courselist">COM_COURSELIST_MENU_COURSES</menu>
+			<menu link="option=com_courselist&amp;view=sections">COM_COURSELIST_MENU_SECTIONS</menu>
+		</submenu>
+		<!-- admin files/folders -->
+		<files folder="admin">
+			<filename>index.html</filename>
+			<filename>courselist.php</filename>
+			<filename>controller.php</filename>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+			<folder>controllers</folder>
+			<folder>css</folder>
+			<folder>language</folder>
+			<folder>helpers</folder>
+		</files>
+	</administration>
+</extension>

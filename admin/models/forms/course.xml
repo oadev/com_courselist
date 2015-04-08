@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="course_id"
+			type="hidden" />
+		<field
+			name="course_name"
+			type="text"
+			label="Course Name"
+			description="Full name of the course (up to 255 characters)"
+			class="input-xxlarge input-large-text"
+			required="true"
+			default="" />
+		<field
+			name="course_dept"
+			type="text"
+			label="Course Department"
+			description="4 character department code. Examples: BIOL, CREL, CHEM"
+			required="true"
+			default="" />
+		<field
+			name="course_code"
+			type="text"
+			label="Course Code"
+			description="4 digit course code which immediately preceeds department code"
+			required="true"
+			default="" />
+		<field
+			name="course_desc"
+			type="textarea"
+			label="Course Description"
+			rows="10"
+			cols="150"
+			description="As seen in the academic calendar"
+			required="true"
+			default="" />
+		<field
+			name="course_graphic_url"
+			type="file"
+			label="Course Graphic"
+			description="Graphical representation of the course"
+			accept="image/*" />
+	</fieldset>
+</form>

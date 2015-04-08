@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field
+			name="section_id"
+			type="hidden" />
+		<field name="course_id" type="sql" default="10" label="Course" query="SELECT course_id, concat( course_dept,' ', course_code ) AS coursecode FROM #__courselist" key_field="course_id" value_field="coursecode" description="Select a course to assign this section to" required="true" >
+			<option value="">Please select a course</option>
+		</field>
+		<field
+			name="section_num"
+			type="text"
+			label="Section Number"
+			description="Section number"
+			required="true"
+			default="" />
+		<field
+			name="eden_id"
+			type="text"
+			label="Eden ID"
+			description="Eden ID number for this course section"
+			required="true"
+			default="" />
+		<field
+			name="start_date"
+			type="calendar"
+			format="%Y-%m-%d"
+			label="Start Date"
+			description="Start date"
+			required="true"
+			default="" />
+		<field
+			name="end_date"
+			type="calendar"
+			format="%Y-%m-%d"
+			label="Start Date"
+			description="Start date"
+			required="true"
+			default="" />
+		<field
+			name="video_id"
+			type="text"
+			label="Course Intro Video URL"
+			description="URL of course introduciton video"
+			required="true"
+			default="" />
+		<field
+			name="delivery_location"
+			type="text"
+			label="Delivery Location"
+			description="Delivery location"
+			required="true"
+			default="" />
+		<field
+			name="physical_location"
+			type="text"
+			label="Physical Location"
+			description="Example: BAC Room 134"
+			default="" />
+		<field
+			name="delivery_format"
+			type="text"
+			label="Delivery Format"
+			description="Online, On Campus, etc."
+			required="true"
+			default="" />
+		<field
+			name="section_desc"
+			type="textarea"
+			label="Section Description"
+			rows="10"
+			cols="150"
+			description="Section Description"
+			required="true"
+			default="" />
+	</fieldset>
+</form>
