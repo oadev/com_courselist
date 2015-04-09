@@ -1,25 +1,25 @@
 CREATE TABLE IF NOT EXISTS `#__courselist_terms` (
-	`term_id` int(11) NOT NULL AUTO_INCREMENT,
-	`term_name` varchar(25), 
+	`term_id` int(2) NOT NULL AUTO_INCREMENT,
+	`term_name` varchar(25) NOT NULL, 
 	PRIMARY KEY (`term_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `#__courselist` (
 	`course_id` int(11) NOT NULL AUTO_INCREMENT,
 	`published` BOOLEAN NOT NULL DEFAULT 0,
-	`course_code` VARCHAR(4),
-	`course_dept` VARCHAR(4),
-	`course_name` VARCHAR(255),
+	`course_code` VARCHAR(4) NOT NULL,
+	`course_dept` VARCHAR(4) NOT NULL,
+	`course_name` VARCHAR(255) NOT NULL,
 	`course_desc` VARCHAR(3000),
 	`course_graphic_url` VARCHAR(255),
-	`hours` INT(1) NULL,
+	`credit_hours` INT(1) NOT NULL,
 	PRIMARY KEY (`course_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `#__courselist_sections` (
 	`section_id` int(11) NOT NULL AUTO_INCREMENT,
 	`course_id` int(11) NOT NULL,
-	`term_id` int(11) NULL,
+	`term_id` int(2) NULL,
 	`eden_id` VARCHAR(15) NULL,
 	`published` BOOLEAN NOT NULL DEFAULT 0,
 	`section_num` VARCHAR(2),
